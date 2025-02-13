@@ -102,7 +102,7 @@ export default [
       'no-unused-vars': 'warn',
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
       'jsx-quotes': ['error', 'prefer-double'],
-      'arrow-body-style': ['warn', 'as-needed'],
+      'arrow-body-style': 'off',
       'prefer-const': 'error',
       'no-duplicate-imports': 'error',
     },
