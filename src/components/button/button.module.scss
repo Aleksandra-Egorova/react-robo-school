@@ -12,23 +12,23 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $button-color-primary-hover;
+    background-color: $controls-bg-primary-hover;
   }
 }
 
 .primary {
-  background-color: $button-color-primary;
+  background-color: $controls-bg-primary;
 
   &:hover {
-    background-color: $button-color-primary-hover;
+    background-color: $controls-bg-primary-hover;
   }
 }
 
 .secondary {
-  background-color: $button-color-secondary;
+  background-color: $controls-bg-tertiary;
 
   &:hover {
-    background-color: $button-color-secondary-hover;
+    background-color: $controls-color-tertiary-hover;
   }
 }
 
