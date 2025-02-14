@@ -73,6 +73,11 @@
     font-size: 18px;
     margin-top: 20px;
   }
+
+  .button {
+    align-self: stretch;
+    margin-top: auto;
+  }
 }
 
 @media (max-width: 768px) {
