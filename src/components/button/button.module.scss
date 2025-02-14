@@ -38,11 +38,8 @@
   margin-top: auto;
 }
 
-@media screen and (max-width: 768px) {
-  .button {
-    font-size: 16px;
-  }
-
+@media (max-width: 768px) {
+  .button,
   .text {
     font-size: 16px;
   }
