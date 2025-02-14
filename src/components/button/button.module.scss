@@ -1,0 +1,49 @@
+@use '@/styles/variables.scss' as *;
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 54px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  color: $text-color-secondary;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $button-color-primary-hover;
+  }
+}
+
+.primary {
+  background-color: $button-color-primary;
+
+  &:hover {
+    background-color: $button-color-primary-hover;
+  }
+}
+
+.secondary {
+  background-color: $button-color-secondary;
+
+  &:hover {
+    background-color: $button-color-secondary-hover;
+  }
+}
+
+.text {
+  font-size: 18px;
+  color: $text-color-accent;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
