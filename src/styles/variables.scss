@@ -1,6 +1,7 @@
 @use 'fonts' as *;
 
 $primary-color: #141024;
+$primary-color-70: #141024b3;
 $secondary-color: #ffffff;
 $tertiary-color: #dddce0;
 $accent-color: #d52027;
@@ -8,6 +9,7 @@ $accent-color: #d52027;
 $font-default: 'Jost', sans-serif;
 
 $text-color-primary: $primary-color;
+$text-color-primary-70: $primary-color-70;
 $text-color-secondary: $secondary-color;
 $text-color-tertiary: #595664;
 $text-color-accent: $accent-color;
@@ -25,3 +27,6 @@ $controls-bg-tertiary: $primary-color;
 $controls-color-tertiary-hover: #7e0411;
 $controls-color-primary: $secondary-color;
 $controls-color-secondary: $accent-color;
+
+$shadow-color-light: #1410241a;
+$shadow-light: 0px 2px 8px $shadow-color-light;
