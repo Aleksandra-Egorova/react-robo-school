@@ -1,0 +1,38 @@
+@use '@/styles/variables.scss' as *;
+
+.tooltip {
+  position: absolute;
+  cursor: pointer;
+  padding: 10px;
+  bottom: 10%;
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  .text {
+    position: absolute;
+    width: max-content;
+    max-width: 260px;
+    bottom: 100%;
+    background-color: $bg-color-primary;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 20px;
+    box-shadow: $shadow-light;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    .text {
+      font-size: 14px;
+      left: -160px;
+    }
+  }
+}
