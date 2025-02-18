@@ -4,7 +4,6 @@ import { BenefitItem } from './components/benefit-item';
 
 import styles from './main-benefits.module.scss';
 
-// eslint-disable-next-line no-unused-vars
 const benefitItems = [
   {
     id: 1,
