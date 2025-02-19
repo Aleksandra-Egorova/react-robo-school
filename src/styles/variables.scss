@@ -11,6 +11,7 @@ $text-color-primary: $primary-color;
 $text-color-secondary: $secondary-color;
 $text-color-tertiary: #595664;
 $text-color-accent: $accent-color;
+$text-color-error: #b1090f;
 
 $bg-color-primary: $secondary-color;
 $bg-color-secondary: #f9f9f9;
@@ -28,3 +29,14 @@ $controls-color-secondary: $accent-color;
 
 $shadow-color-light: #1410241a;
 $shadow-light: 0px 2px 8px $shadow-color-light;
+$shadow-error:
+  0 0 5px $secondary-color,
+  0 0 10px $secondary-color,
+  0 0 15px $accent-color,
+  0 0 20px $accent-color,
+  0 0 25px $accent-color,
+  0 0 30px $accent-color;
+
+$input-bg-color: #f6f6f6;
+
+$border-invalid: 1px solid $accent-color;
