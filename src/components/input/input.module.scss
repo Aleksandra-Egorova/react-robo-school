@@ -1,0 +1,18 @@
+@use '@/styles/variables.scss' as *;
+
+.input {
+  border-radius: 5px;
+  padding: 19px 20px;
+  font-size: 18px;
+  background-color: $input-bg-color;
+  color: $text-color-primary;
+}
+
+.error {
+  border: $border-invalid;
+}
+
+.message {
+  color: $text-color-error;
+  text-shadow: $shadow-error;
+}
