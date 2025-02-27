@@ -23,28 +23,3 @@ body {
 section {
   padding: 120px 0;
 }
-
-.swiper-horizontal .swiper-scrollbar {
-  position: relative;
-  height: 5px;
-  width: 360px;
-  border-radius: 40px;
-  margin-top: 77px;
-  margin-bottom: 20px;
-  bottom: 100px;
-}
-
-.swiper-scrollbar-drag {
-  position: absolute;
-  cursor: grab;
-  height: 5px;
-  width: 260px;
-  border-radius: 40px;
-  background-color: $controls-bg-tertiary;
-}
-
-@media (max-width: 768px) {
-  .swiper-horizontal .swiper-scrollbar {
-    width: calc(100% + 20px);
-  }
-}
