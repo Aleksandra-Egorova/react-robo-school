@@ -1,0 +1,64 @@
+@use '@/styles/variables.scss' as *;
+
+.teacherItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 360px;
+  gap: 20px;
+  height: 100%;
+
+  .img {
+    width: 100%;
+    height: 500px;
+    max-height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+
+    .name {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .post {
+      font-size: 18px;
+      color: $text-color-tertiary;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      font-size: 18px;
+      margin-top: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .teacherItem {
+    .img {
+      height: 306px;
+    }
+
+    .info {
+      .name {
+        font-size: 20px;
+      }
+
+      .post {
+        font-size: 14px;
+      }
+
+      .btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
