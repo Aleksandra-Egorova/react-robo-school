@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // flex: 1 0 360px;
+  max-width: 360px;
   gap: 20px;
-  // height: 100%;
+  height: 100%;
 
   .img {
     width: 100%;
@@ -22,7 +22,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-grow: 1;
-    // height: 100%;
 
     .name {
       font-size: 24px;
@@ -44,9 +43,6 @@
 
 @media (max-width: 768px) {
   .teacherItem {
-    // flex: 1 0 220px;
-    height: 450px;
-
     .img {
       height: 306px;
     }
