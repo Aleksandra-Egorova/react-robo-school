@@ -32,15 +32,13 @@ export const MainTeachers = () => {
     return (swiperRef.current = swiper);
   };
 
-  const handlerChangeSlide = (direction) => {
-    return () => {
-      if (direction === 'prev') {
-        swiperRef.current.slidePrev();
-      }
-      if (direction === 'next') {
-        swiperRef.current.slideNext();
-      }
-    };
+  const createSlideChangeHandler = (direction) => () => {
+    if (direction === 'prev') {
+      swiperRef.current.slidePrev();
+    }
+    if (direction === 'next') {
+      swiperRef.current.slideNext();
+    }
   };
 
   return (
@@ -71,10 +69,10 @@ export const MainTeachers = () => {
           <div ref={scrollbarRef} className={styles.scrollbar} />
 
           <div className={styles.swiperButtons}>
-            <button className={styles.prev} onClick={handlerChangeSlide('prev')}>
+            <button className={styles.prev} onClick={createSlideChangeHandler('prev')}>
               <ArrowLeftIcon />
             </button>
-            <button className={styles.next} onClick={handlerChangeSlide('next')}>
+            <button className={styles.next} onClick={createSlideChangeHandler('next')}>
               <ArrowRightIcon />
             </button>
           </div>
