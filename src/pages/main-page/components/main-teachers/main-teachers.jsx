@@ -21,21 +21,26 @@ export const MainTeachers = () => {
 
   const swiperRef = useRef(null);
   const scrollbarRef = useRef(null);
-  const initSwiper = (swiper) => (swiperRef.current = swiper);
 
   useEffect(() => {
     if (swiperRef.current && scrollbarRef.current) {
       swiperRef.current.update();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scrollbarRef.current]);
+  }, [swiperRef, scrollbarRef]);
 
-  const changeSlide = (direction) => {
-    if (direction === 'prev') {
-      swiperRef.current.slidePrev();
-    } else if (direction === 'next') {
-      swiperRef.current.slideNext();
-    }
+  const initSwiper = (swiper) => {
+    return (swiperRef.current = swiper);
+  };
+
+  const handlerChangeSlide = (direction) => {
+    return () => {
+      if (direction === 'prev') {
+        swiperRef.current.slidePrev();
+      }
+      if (direction === 'next') {
+        swiperRef.current.slideNext();
+      }
+    };
   };
 
   return (
@@ -62,17 +67,17 @@ export const MainTeachers = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
 
-        <div ref={scrollbarRef} className={styles.scrollbar} />
+          <div ref={scrollbarRef} className={styles.scrollbar} />
 
-        <div className={styles.swiperButtons}>
-          <button className={styles.prev} onClick={() => changeSlide('prev')}>
-            <ArrowLeftIcon />
-          </button>
-          <button className={styles.next} onClick={() => changeSlide('next')}>
-            <ArrowRightIcon />
-          </button>
+          <div className={styles.swiperButtons}>
+            <button className={styles.prev} onClick={handlerChangeSlide('prev')}>
+              <ArrowLeftIcon />
+            </button>
+            <button className={styles.next} onClick={handlerChangeSlide('next')}>
+              <ArrowRightIcon />
+            </button>
+          </div>
         </div>
       </Container>
     </section>
