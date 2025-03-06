@@ -16,7 +16,9 @@ $bg-color-primary: $secondary-color;
 $bg-color-secondary: #f9f9f9;
 $bg-color-tertiary: $primary-color;
 $bg-color-quaternary: $tertiary-color;
+$bg-color-quinary: #00000033;
 $bg-color-accent: $accent-color;
+$bg-color-tabs-blur: linear-gradient(#ffffff66, #fbfbfb80);
 
 $controls-bg-primary: $accent-color;
 $controls-bg-primary-hover: #be2027;
@@ -30,3 +32,5 @@ $controls-color-secondary: $accent-color;
 
 $shadow-color-light: #1410241a;
 $shadow-light: 0px 2px 8px $shadow-color-light;
+
+$border-tabs: 1px solid #1410241c;
