@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 
-export const useOutsideClick = ({ ref, handler, condition, expectElementRef }) => {
+export const useOutsideClick = ({ ref, handler, condition, exceptElementRef }) => {
   useEffect(() => {
     if (condition) {
       const handleClickOutside = (event) => {
         if (
           ref.current &&
           !ref.current.contains(event.target) &&
-          (!expectElementRef || !expectElementRef.current.contains(event.target))
+          (!exceptElementRef || !exceptElementRef.current.contains(event.target))
         ) {
           handler();
         }
@@ -18,5 +18,5 @@ export const useOutsideClick = ({ ref, handler, condition, expectElementRef }) =
         document.removeEventListener('mousedown', handleClickOutside);
       };
     }
-  }, [ref, handler, condition, expectElementRef]);
+  }, [ref, handler, condition, exceptElementRef]);
 };
