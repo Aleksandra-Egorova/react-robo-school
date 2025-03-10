@@ -1,0 +1,21 @@
+@use '@/styles/variables.scss' as *;
+
+.navTabs {
+  display: flex;
+  font-size: 20px;
+  border-bottom: $border-tabs;
+
+  .navTabsBtn {
+    display: flex;
+    flex: 0 1 33.333%;
+    padding: 20px 0;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  .activeTab {
+    color: $accent-color;
+  }
+}
