@@ -15,7 +15,7 @@ export const Select = ({ options, value, onChange }) => {
     ref: selectRef,
     handler: () => setIsSelectOpen(false),
     condition: isSelectOpen,
-    expectElementRef: buttonRef,
+    exceptElementRef: buttonRef,
   });
 
   const createSelectHandler = (value) => () => {
@@ -23,7 +23,7 @@ export const Select = ({ options, value, onChange }) => {
     setIsSelectOpen(false);
   };
 
-  const handleSelectOpen = () => {
+  const handleSelectToggle = () => {
     setIsSelectOpen((isSelectOpen) => !isSelectOpen);
   };
 
@@ -31,7 +31,7 @@ export const Select = ({ options, value, onChange }) => {
 
   return (
     <div className={styles.select} ref={selectRef}>
-      <button className={styles.button} ref={buttonRef} onClick={handleSelectOpen}>
+      <button className={styles.button} ref={buttonRef} onClick={handleSelectToggle}>
         {buttonText}
         <ArrowDownIcon className={`${styles.dropdownArrow} ${isSelectOpen ? styles.open : ''}`} />
       </button>
