@@ -5,28 +5,23 @@ import { useWindowSize } from '@/hooks/useWindowSize';
 
 import { SocialLinks } from './social-links/social-links';
 import { Select } from './select';
+import { Tabs } from './tabs';
 
 import styles from './modal-content.module.scss';
 
-const options = [
-  { value: 0, label: 'Образование' },
-  { value: 1, label: 'Опыт' },
-  { value: 2, label: 'Навыки' },
-];
-
 export const TeacherModalContent = ({ teacher }) => {
-  const { isMobile } = useWindowSize();
-
   const [activeTab, setActiveTab] = useState(0);
+  const { isMobile } = useWindowSize();
 
   const { name, imageName, desc, links, tabs } = teacher;
 
+  const options = tabs.map((tab, index) => ({
+    value: index,
+    label: tab.title,
+  }));
+
   const createActiveTabChangeHandler = (index) => () => {
     setActiveTab(index);
-  };
-
-  const createActiveTabClassname = (index) => {
-    return `${styles.navTabsBtn} ${activeTab === index ? styles.activeTab : ''}`;
   };
 
   const activeTabContent = tabs[activeTab]?.data || [];
@@ -46,17 +41,7 @@ export const TeacherModalContent = ({ teacher }) => {
         {isMobile ? (
           <Select options={options} value={activeTab} onChange={setActiveTab} />
         ) : (
-          <div className={styles.navTabs}>
-            {tabs.map((tab, index) => (
-              <button
-                key={index}
-                className={createActiveTabClassname(index)}
-                onClick={createActiveTabChangeHandler(index)}
-              >
-                {tab.title}
-              </button>
-            ))}
-          </div>
+          <Tabs tabs={tabs} activeTab={activeTab} onChange={createActiveTabChangeHandler} />
         )}
         <div className={styles.tabsContent}>
           {activeTabContent.map((item, index) => (
