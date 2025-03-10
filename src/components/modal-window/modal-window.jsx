@@ -23,31 +23,27 @@ export const Modal = ({ children, isOpen, onClose }) => {
     unlockScroll();
   }, [isOpen, lockScroll, unlockScroll]);
 
-  useOutsideClick({
-    ref: modalRef,
-    handler: () => {
-      if (isOpen) {
-        onClose();
-      }
-    },
-    condition: isOpen,
-  });
-
-  if (!isOpen) return null;
-
   const handleModalClose = () => {
     onClose();
   };
 
+  useOutsideClick({
+    ref: modalRef,
+    handler: handleModalClose,
+    condition: isOpen,
+  });
+
+  if (!isOpen) {
+    return null;
+  }
+
   return ReactDOM.createPortal(
     <div className={styles.modal}>
-      <div ref={modalRef} className={styles.modalBackdrop}>
-        <div className={styles.modalContent}>
-          {children}
-          <button className={styles.modalClose} onClick={handleModalClose}>
-            {isMobile ? <CloseIconBlack /> : 'Закрыть'}
-          </button>
-        </div>
+      <div ref={modalRef} className={styles.modalContent}>
+        {children}
+        <button className={styles.modalClose} onClick={handleModalClose}>
+          {isMobile ? <CloseIconBlack /> : 'Закрыть'}
+        </button>
       </div>
     </div>,
     document.body,
