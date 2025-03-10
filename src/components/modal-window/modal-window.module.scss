@@ -11,10 +11,8 @@
   z-index: 1000;
   width: 100%;
   height: 100%;
-  padding: 0 30px;
-  cursor: pointer;
 
-  .modalBackdrop {
+  .modalContent {
     position: relative;
     background-color: $secondary-color;
     padding: 40px;
@@ -23,26 +21,15 @@
     max-height: 90vh;
     max-width: 90vw;
 
-    .modalContent {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      height: 688px;
-      width: 860px;
-      max-width: 100%;
+    .modalClose {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      font-size: 18px;
+      color: $text-color-tertiary;
 
-      .modalClose {
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 1000;
-        font-size: 18px;
-        line-height: 1.6;
-        color: $text-color-tertiary;
-
-        &:hover {
-          color: $accent-color;
-        }
+      &:hover {
+        color: $accent-color;
       }
     }
   }
@@ -52,7 +39,7 @@
   .modal {
     padding: 0;
 
-    .modalBackdrop {
+    .modalContent {
       width: 100%;
       height: 100%;
       padding: 30px 20px;
@@ -61,14 +48,9 @@
       max-height: 100dvh;
       max-width: 100vw;
 
-      .modalContent {
-        width: 100%;
-        height: auto;
-
-        .modalClose {
-          right: -10px;
-          top: -20px;
-        }
+      .modalClose {
+        top: 10px;
+        right: 10px;
       }
     }
   }
