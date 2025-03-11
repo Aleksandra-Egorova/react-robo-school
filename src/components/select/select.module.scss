@@ -1,0 +1,43 @@
+@use '@/styles/variables.scss' as *;
+.select {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .button {
+    background-color: $accent-color;
+    padding: 10px;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+
+    .dropdownArrow {
+      transform: translateY(-10%);
+      margin-left: 5px;
+      width: 10px;
+      height: 10px;
+    }
+
+    .open {
+      transform: translateY(-10%) rotate(180deg);
+    }
+  }
+
+  .dropdown {
+    background-color: $accent-color;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 100%;
+
+    .option {
+      padding: 10px;
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
+    }
+
+    .activeOption {
+      background-color: $controls-color-tertiary-hover;
+    }
+  }
+}
