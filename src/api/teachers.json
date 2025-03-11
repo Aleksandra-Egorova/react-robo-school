@@ -7,11 +7,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
@@ -72,11 +72,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
@@ -137,11 +137,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
@@ -202,11 +202,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
@@ -267,11 +267,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
