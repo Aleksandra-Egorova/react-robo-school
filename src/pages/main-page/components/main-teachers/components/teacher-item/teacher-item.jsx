@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import { teachersImages } from '@/assets/images';
 import { Button } from '@/components/button';
-import { Modal } from '@/components/modal-window';
+import { Modal } from '@/components/modal';
 
-import { TeacherModalContent } from '../modal-content';
+import { TeacherModalContent } from './components/teacher-modal-content';
 
 import styles from './teacher-item.module.scss';
 
