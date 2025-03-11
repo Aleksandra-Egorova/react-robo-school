@@ -14,9 +14,6 @@
     padding-bottom: 100px;
     display: flex;
     margin-top: 60px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
       display: none;
