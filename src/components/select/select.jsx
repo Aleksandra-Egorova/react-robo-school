@@ -22,8 +22,8 @@ export const Select = ({ options, value, onChange }) => {
     exceptElementRef: buttonRef,
   });
 
-  const createSelectHandler = (value) => () => {
-    onChange(value);
+  const createSelectHandler = (option) => () => {
+    onChange(option);
     handleSelectClose();
   };
 
@@ -31,12 +31,12 @@ export const Select = ({ options, value, onChange }) => {
     setIsSelectOpen((isSelectOpen) => !isSelectOpen);
   };
 
-  const buttonText = options.find((option) => option.value === value)?.label;
+  const buttonText = value.title;
 
   const arrowIconClassname = `${styles.dropdownArrow} ${isSelectOpen ? styles.open : ''}`;
 
-  const createOptionClassname = (optionValue) => {
-    return `${styles.option} ${optionValue === value ? styles.activeOption : ''}`;
+  const createOptionClassname = (option) => {
+    return `${styles.option} ${option === value ? styles.activeOption : ''}`;
   };
 
   return (
@@ -48,13 +48,13 @@ export const Select = ({ options, value, onChange }) => {
 
       {isSelectOpen && (
         <div className={styles.dropdown}>
-          {options.map(({ value: optionValue, label }) => (
+          {options.map((option) => (
             <button
-              key={optionValue}
-              className={createOptionClassname(optionValue)}
-              onClick={createSelectHandler(optionValue)}
+              key={option.name}
+              className={createOptionClassname(option)}
+              onClick={createSelectHandler(option)}
             >
-              {label}
+              {option.title}
             </button>
           ))}
         </div>
