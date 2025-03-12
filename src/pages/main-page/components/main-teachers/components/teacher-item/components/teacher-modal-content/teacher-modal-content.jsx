@@ -11,28 +11,16 @@ import { TabsContent } from './components/tabs-content';
 import styles from './teacher-modal-content.module.scss';
 
 export const TeacherModalContent = ({ teacher }) => {
-  const [activeTab, setActiveTab] = useState(teacher.tabs[0].name);
-
+  const [activeTab, setActiveTab] = useState(teacher.tabs[0]);
   const [activeTabContent, setActiveTabContent] = useState(teacher.tabs[0].data);
 
   useEffect(() => {
-    const newContent = teacher.tabs.find((tab) => tab.name === activeTab);
-
-    if (!newContent) {
-      return;
-    }
-
-    setActiveTabContent(newContent.data);
-  }, [activeTab, teacher.tabs]);
+    setActiveTabContent(activeTab.data);
+  }, [activeTab]);
 
   const { isMobile } = useWindowSize();
 
   const { name, imageName, desc, links, tabs } = teacher;
-
-  const options = tabs.map(({ name, title }) => ({
-    value: name,
-    label: title,
-  }));
 
   return (
     <div className={styles.teacherModal}>
@@ -47,9 +35,9 @@ export const TeacherModalContent = ({ teacher }) => {
 
       <div className={styles.teacherTabs}>
         {isMobile ? (
-          <Select options={options} value={activeTab} onChange={setActiveTab} />
+          <Select options={tabs} value={activeTab} onChange={setActiveTab} />
         ) : (
-          <Tabs options={options} value={activeTab} onClick={setActiveTab} />
+          <Tabs options={tabs} value={activeTab} onClick={setActiveTab} />
         )}
         <div className={styles.tabsContent}>
           {activeTabContent.map((tab, index) => (
