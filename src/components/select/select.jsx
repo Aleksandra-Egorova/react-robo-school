@@ -11,16 +11,20 @@ export const Select = ({ options, value, onChange }) => {
   const selectRef = useRef(null);
   const buttonRef = useRef(null);
 
+  const handleSelectClose = () => {
+    setIsSelectOpen(false);
+  };
+
   useOutsideClick({
     ref: selectRef,
-    handler: () => setIsSelectOpen(false),
+    handler: handleSelectClose,
     condition: isSelectOpen,
     exceptElementRef: buttonRef,
   });
 
   const createSelectHandler = (value) => () => {
     onChange(value);
-    setIsSelectOpen(false);
+    handleSelectClose();
   };
 
   const handleSelectToggle = () => {
@@ -29,11 +33,17 @@ export const Select = ({ options, value, onChange }) => {
 
   const buttonText = options.find((option) => option.value === value)?.label;
 
+  const arrowIconClassname = `${styles.dropdownArrow} ${isSelectOpen ? styles.open : ''}`;
+
+  const createOptionClassname = (optionValue) => {
+    return `${styles.option} ${optionValue === value ? styles.activeOption : ''}`;
+  };
+
   return (
     <div className={styles.select} ref={selectRef}>
       <button className={styles.button} ref={buttonRef} onClick={handleSelectToggle}>
         {buttonText}
-        <ArrowDownIcon className={`${styles.dropdownArrow} ${isSelectOpen ? styles.open : ''}`} />
+        <ArrowDownIcon className={arrowIconClassname} />
       </button>
 
       {isSelectOpen && (
@@ -41,7 +51,7 @@ export const Select = ({ options, value, onChange }) => {
           {options.map(({ value: optionValue, label }) => (
             <button
               key={optionValue}
-              className={`${styles.option} ${optionValue === value ? styles.activeOption : ''}`}
+              className={createOptionClassname(optionValue)}
               onClick={createSelectHandler(optionValue)}
             >
               {label}
