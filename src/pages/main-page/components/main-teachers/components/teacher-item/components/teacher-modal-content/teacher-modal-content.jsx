@@ -6,12 +6,13 @@ import { useWindowSize } from '@/hooks/useWindowSize';
 
 import { SocialLinks } from './components/social-links/social-links';
 import { Tabs } from './components/tabs';
-import { TabsContent } from './components/tabs/tabs-content';
+import { TabsContent } from './components/tabs-content';
 
 import styles from './teacher-modal-content.module.scss';
 
 export const TeacherModalContent = ({ teacher }) => {
   const [activeTab, setActiveTab] = useState(teacher.tabs[0].name);
+
   const [activeTabContent, setActiveTabContent] = useState(teacher.tabs[0].data);
 
   useEffect(() => {
@@ -28,9 +29,9 @@ export const TeacherModalContent = ({ teacher }) => {
 
   const { name, imageName, desc, links, tabs } = teacher;
 
-  const options = tabs.map((tab) => ({
-    value: tab.name,
-    label: tab.title,
+  const options = tabs.map(({ name, title }) => ({
+    value: name,
+    label: title,
   }));
 
   return (
