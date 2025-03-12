@@ -1,23 +1,23 @@
 import styles from './tabs.module.scss';
 
 export const Tabs = ({ options, value, onClick }) => {
-  const createActiveTabClassname = (tabValue) => {
-    return `${styles.navTabsBtn} ${value === tabValue ? styles.activeTab : ''}`;
+  const createActiveTabClassname = (tab) => {
+    return `${styles.navTabsBtn} ${value === tab ? styles.activeTab : ''}`;
   };
 
-  const createActiveTabChangeHandler = (optionValue) => () => {
-    onClick(optionValue);
+  const createActiveTabChangeHandler = (option) => () => {
+    onClick(option);
   };
 
   return (
     <div className={styles.navTabs}>
-      {options.map(({ value: optionValue, label }) => (
+      {options.map((option) => (
         <button
-          key={optionValue}
-          className={createActiveTabClassname(optionValue)}
-          onClick={createActiveTabChangeHandler(optionValue)}
+          key={option.name}
+          className={createActiveTabClassname(option)}
+          onClick={createActiveTabChangeHandler(option)}
         >
-          {label}
+          {option.title}
         </button>
       ))}
     </div>
