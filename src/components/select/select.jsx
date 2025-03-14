@@ -31,18 +31,17 @@ export const Select = ({ options, value, onChange }) => {
     setIsSelectOpen((isSelectOpen) => !isSelectOpen);
   };
 
-  const buttonText = value.title;
-
   const arrowIconClassname = `${styles.dropdownArrow} ${isSelectOpen ? styles.open : ''}`;
 
-  const createOptionClassname = (option) => {
-    return `${styles.option} ${option === value ? styles.activeOption : ''}`;
+  const createOptionClassname = (optionValue) => {
+    return `${styles.option} ${optionValue === value.value ? styles.activeOption : ''}`;
   };
 
   return (
     <div className={styles.select} ref={selectRef}>
       <button className={styles.button} ref={buttonRef} onClick={handleSelectToggle}>
-        {buttonText}
+        {value.label}
+
         <ArrowDownIcon className={arrowIconClassname} />
       </button>
 
@@ -50,11 +49,11 @@ export const Select = ({ options, value, onChange }) => {
         <div className={styles.dropdown}>
           {options.map((option) => (
             <button
-              key={option.name}
-              className={createOptionClassname(option)}
+              key={option.value}
+              className={createOptionClassname(option.value)}
               onClick={createSelectHandler(option)}
             >
-              {option.title}
+              {option.label}
             </button>
           ))}
         </div>
