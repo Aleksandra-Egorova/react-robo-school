@@ -14,9 +14,6 @@
     padding-bottom: 100px;
     display: flex;
     margin-top: 60px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
       display: none;
@@ -93,7 +90,8 @@
       }
 
       .scrollbar {
-        width: calc(100%);
+        width: calc(100% - 20px);
+        margin-left: 10px;
       }
 
       .swiperButtons {

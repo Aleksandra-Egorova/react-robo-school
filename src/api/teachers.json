@@ -7,11 +7,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
@@ -72,11 +72,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
@@ -137,11 +137,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
@@ -162,8 +162,8 @@
           {
             "title": "Курсы и тренинги",
             "text": [
-              "Завершила онлайн-курс 'Алгоритмы и структуры данных' на Udacity.",
-              "Прошла тренинг по программированию микроконтроллеров и Arduino в Центре робототехники и автоматизации."
+              "Завершил онлайн-курс 'Алгоритмы и структуры данных' на Udacity.",
+              "Прошел тренинг по программированию микроконтроллеров и Arduino в Центре робототехники и автоматизации."
             ]
           }
         ]
@@ -202,11 +202,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
@@ -267,11 +267,11 @@
     "links": [
       {
         "href": "www.facebook.com",
-        "imagePath": "src/assets/icons/facebook-icon.svg"
+        "imagePath": "assets/icons/facebook-icon.svg"
       },
       {
         "href": "https://www.instagram.com",
-        "imagePath": "src/assets/icons/insta-icon.svg"
+        "imagePath": "assets/icons/insta-icon.svg"
       }
     ],
     "tabs": [
