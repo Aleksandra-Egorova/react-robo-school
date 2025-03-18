@@ -42,7 +42,7 @@ export const MainTeachers = () => {
   };
 
   return (
-    <section className={styles.teachers} id="teachers">
+    <section className={`${styles.teachers} anchor-target`} id="teachers">
       <Container>
         <h2 className={styles.title}>Профессиональные тренеры</h2>
 
