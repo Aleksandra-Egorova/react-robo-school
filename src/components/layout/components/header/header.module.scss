@@ -21,13 +21,5 @@
 @media (max-width: 1024px) {
   .header {
     padding: 10px 0;
-
-    .content {
-      .mobileContent {
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-      }
-    }
   }
 }
