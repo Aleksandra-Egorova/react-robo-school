@@ -27,7 +27,7 @@ const aboutItems = [
 
 export const MainAbout = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="status">
       <Container>
         <div className={styles.wrapper}>
           <p className={styles.text}>
