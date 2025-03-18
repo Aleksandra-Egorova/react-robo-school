@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { BurgerIcon, CloseIcon } from '@/assets/icons';
 import { Link } from '@/components/link';
+import { useScrollLock } from '@/hooks/useScrollLock';
 
 import styles from './mobile-navbar.module.scss';
 
@@ -25,12 +26,16 @@ const navbarItems = [
 
 export const MobileNavbar = () => {
   const [isMobileNavbarOpen, setIsMobileNavbarOpen] = useState(false);
+  const { lockScroll, unlockScroll } = useScrollLock();
+
   const handleMobileNavbarOpen = () => {
     setIsMobileNavbarOpen(true);
+    lockScroll();
   };
 
   const handleMobileNavbarClose = () => {
     setIsMobileNavbarOpen(false);
+    unlockScroll();
   };
 
   return (
