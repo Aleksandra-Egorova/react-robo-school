@@ -1,17 +1,6 @@
 @use '@/styles/variables.scss' as *;
 
-.mobilePhoneCall {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  border: 1px solid $secondary-color;
-}
-
-.desktopPhoneCall {
+.phoneCall {
   font-size: 30px;
   font-weight: 600;
   color: $text-color-secondary;
