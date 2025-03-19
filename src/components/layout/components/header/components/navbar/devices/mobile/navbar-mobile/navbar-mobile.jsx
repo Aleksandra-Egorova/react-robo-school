@@ -23,17 +23,17 @@ export const NavbarMobile = ({ navbarItems }) => {
   return (
     <>
       <div className={styles.navbarButtons}>
-        <a href="tel:88000001122" className={styles.iconButtonMobile}>
+        <a href="tel:88000001122" className={styles.iconButton}>
           <PhoneIcon />
         </a>
 
-        <button onClick={handleMobileNavbarOpen} className={styles.iconButtonMobile}>
+        <button onClick={handleMobileNavbarOpen} className={styles.iconButton}>
           <BurgerIcon />
         </button>
       </div>
 
       {isMobileNavbarOpen && (
-        <div className={styles.navbarMobileContent}>
+        <div className={styles.navbarContent}>
           <nav className={styles.mobileNav}>
             <ul className={styles.mobileNavList}>
               {navbarItems.map((link) => (
@@ -47,7 +47,7 @@ export const NavbarMobile = ({ navbarItems }) => {
           </nav>
           <button
             onClick={handleMobileNavbarClose}
-            className={`${styles.iconButtonMobile} ${styles.closeBurgerBtn}`}
+            className={`${styles.iconButton} ${styles.closeBurgerBtn}`}
           >
             <CloseIcon />
           </button>
