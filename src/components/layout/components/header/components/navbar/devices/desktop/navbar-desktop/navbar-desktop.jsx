@@ -1,5 +1,6 @@
-import { PhoneCallButton } from '@/components/layout/components/phone-call-button';
 import { Link } from '@/components/link';
+
+import { PhoneCallButton } from '../../../../../../phone-call-button';
 
 import styles from './navbar-desktop.module.scss';
 
